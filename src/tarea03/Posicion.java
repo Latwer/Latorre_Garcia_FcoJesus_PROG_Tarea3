@@ -21,4 +21,30 @@ public class Posicion {
             System.out.printf("Error. No se ha insertado una posición válida.\n");
         }
     }
+
+    public int getFila() {
+        return fila;
+    }
+
+    public char getColumna() {
+        return columna;
+    }
+
+    public void setFila(int fila) {
+        if (fila >= 1 && fila <= 8) {
+            this.fila = fila;
+        } else if (fila < 1 || fila > 8) {
+            this.fila = 1;
+            System.out.printf("Error. No se ha insertado una posición válida para la fila.\n");
+        }
+    }
+
+    public void setColumna(char columna) {
+        if (columna >= 'a' && columna <= 'h') {
+            this.columna = columna;
+        } else if (columna < 'a' || columna > 'h') {
+            this.columna = 'a';
+            System.out.printf("Error. No se ha insertado una posición válida para la columna.\n");
+        }
+    }
 }
