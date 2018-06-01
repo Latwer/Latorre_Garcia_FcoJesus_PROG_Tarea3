@@ -24,4 +24,12 @@ public class Rey {
         this.color = Color.BLANCO;
         posicion = new Posicion(1, 'e');
     }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public Posicion getPosicion() {
+        return posicion;
+    }
 }
