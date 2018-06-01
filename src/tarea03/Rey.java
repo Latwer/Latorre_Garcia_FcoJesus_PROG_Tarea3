@@ -8,6 +8,10 @@ public class Rey {
     private Color color;
     private Posicion posicion;
 
+    /**
+     * @param color donde estableceremos el lugar donde se situará el rey por
+     * defecto dependiendo si es blanco o negro
+     */
     public Rey(Color color) {
         this.color = color;
         switch (color) {
@@ -20,24 +24,39 @@ public class Rey {
         }
     }
 
+    /**
+     * parametro por defecto
+     */
     public Rey() {
         this.color = Color.BLANCO;
         posicion = new Posicion(1, 'e');
     }
 
+    /**
+     * @return el color del rey
+     */
     public Color getColor() {
         return color;
     }
 
+    /**
+     * @return la posicion del rey
+     */
     public Posicion getPosicion() {
         return posicion;
     }
 
+    /**
+     * @return el color y la posicion del rey en forma de String
+     */
     @Override
     public String toString() {
         return String.format("Color: %s, Posicion: %s%n", color, posicion);
     }
 
+    /**
+     * @param direccion Donde hará que se pueda mover dicho rey por el tablero
+     */
     public void mueve(Direccion direccion) {
         int fila = posicion.getFila();
         char columna = posicion.getColumna();
