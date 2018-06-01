@@ -32,4 +32,9 @@ public class Rey {
     public Posicion getPosicion() {
         return posicion;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Color: %s, Posicion: %s%n", color, posicion);
+    }
 }
