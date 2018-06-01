@@ -19,4 +19,9 @@ public class Rey {
                 break;
         }
     }
+
+    public Rey() {
+        this.color = Color.BLANCO;
+        posicion = new Posicion(1, 'e');
+    }
 }
