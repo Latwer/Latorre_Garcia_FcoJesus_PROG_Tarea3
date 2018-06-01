@@ -37,4 +37,53 @@ public class Rey {
     public String toString() {
         return String.format("Color: %s, Posicion: %s%n", color, posicion);
     }
+
+    public void mueve(Direccion direccion) {
+        int fila = posicion.getFila();
+        char columna = posicion.getColumna();
+
+        switch (direccion) {
+            case NOROESTE:
+                direccion = Direccion.NOROESTE;
+                posicion.setFila(fila + 1);
+                posicion.setColumna((char) (columna - 1));
+                break;
+            case NORTE:
+                direccion = Direccion.NORTE;
+                posicion.setFila(fila + 1);
+                posicion.setColumna((char) (columna));
+                break;
+            case NORESTE:
+                direccion = Direccion.NORESTE;
+                posicion.setFila(fila + 1);
+                posicion.setColumna((char) (columna + 1));
+                break;
+            case OESTE:
+                direccion = Direccion.OESTE;
+                posicion.setFila(fila);
+                posicion.setColumna((char) (columna - 1));
+                break;
+            case ESTE:
+                direccion = Direccion.ESTE;
+                posicion.setFila(fila);
+                posicion.setColumna((char) (columna + 1));
+                break;
+            case SUROESTE:
+                direccion = Direccion.SUROESTE;
+                posicion.setFila(fila - 1);
+                posicion.setColumna((char) (columna - 1));
+                break;
+            case SUR:
+                direccion = Direccion.SUR;
+                posicion.setFila(fila - 1);
+                posicion.setColumna((char) (columna));
+                break;
+            case SURESTE:
+                direccion = Direccion.SURESTE;
+                posicion.setFila(fila - 1);
+                posicion.setColumna((char) (columna + 1));
+                break;
+
+        }
+    }
 }
