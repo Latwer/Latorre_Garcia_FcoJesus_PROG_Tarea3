@@ -47,4 +47,9 @@ public class Posicion {
             System.out.printf("Error. No se ha insertado una posición válida para la columna.\n");
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format("Fila: %d, Columna: %s%n", fila, columna);
+    }
 }
